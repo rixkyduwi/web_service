@@ -1,0 +1,13 @@
+NAMA : Rizky Dwi Saputra
+KELAS : 6A
+NIM : 19090107
+
+NAMA : Muh Saefudin Fikri
+KELAS : 6B
+NIM : 19090101
+
+username > 19090107
+passwword > 123
+
+username > 19090101
+passwword > 123

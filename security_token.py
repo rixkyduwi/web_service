@@ -11,8 +11,8 @@ auth = HTTPTokenAuth(scheme='Bearer')
 # rizky dwi saputra (6A) 
 # muh saefudin fikri (6B) 
 tokens = {
-    "secret-token-1": "19090107",
-    "secret-token-2": "19090101"
+    "secret-token-rizky": "19090107",
+    "secret-token-saefudin": "19090101"
 }
 
 @auth.verify_token

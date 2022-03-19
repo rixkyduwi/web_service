@@ -24,6 +24,14 @@ class login(dblogin.Model):
     username = dblogin.Column(dblogin.String(80), unique=True, nullable=False, primary_key=True)
     password = dblogin.Column(dblogin.String(100))
     keterangan = dblogin.Column(dblogin.String(100))
+    def __init__(self, username):
+        self.username = username 
+
+    def setPassword(self, password):
+        self.password = generate_password_hash(password)
+
+    def checkPassword(self, password):
+        return check_password_hash(self.password, password)
 users = login.query.all()
 print(users)
 pswd=generate_password_hash("123")
