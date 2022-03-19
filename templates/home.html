@@ -1,0 +1,28 @@
+<html>
+  <body>
+    <h1>Add book</h1>
+    <form method="POST" action="/books/create">
+        <input type="text" name="title">
+        <input type="submit" value="Add">
+    </form>
+
+    <h1>Books</h1>
+    <table>
+        <tr>
+            <th>Title</th>
+            <th colspan="2"></th>
+        </tr>
+        {% for book in books %}
+            <tr><td>{{book.title}}</td>
+                <td><a href='/books/{{ book.title }}/edit' />Edit</td>
+                <td>
+                <form method="POST" action="/books/delete" style="display: inline">
+                  <input type="hidden" value="{{book.title}}" name="title">
+                  <input type="submit" value="x">
+                </form>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+  </body>
+</html>
