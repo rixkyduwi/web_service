@@ -19,7 +19,7 @@ login_manager.init_app(app)
 auth = HTTPBasicAuth()
 # nama kelompok 
 # rizky dwi saputra (6A) 
-# muh saefudin fikri (6B) 
+# moh saefudin fikri (6B) 
 class login(dblogin.Model):
     username = dblogin.Column(dblogin.String(80), unique=True, nullable=False, primary_key=True)
     password = dblogin.Column(dblogin.String(100))
