@@ -24,24 +24,16 @@ class login(dblogin.Model):
     username = dblogin.Column(dblogin.String(80), unique=True, nullable=False, primary_key=True)
     password = dblogin.Column(dblogin.String(100))
     keterangan = dblogin.Column(dblogin.String(100))
-    def __init__(self, username):
-        self.username = username 
-
-    def setPassword(self, password):
-        self.password = generate_password_hash(password)
-
-    def checkPassword(self, password):
-        return check_password_hash(self.password, password)
 users = login.query.all()
 print(users)
 pswd=generate_password_hash("123")
 print(pswd)
 @auth.verify_password
-def verify_password(usernamein, password):
-    username=login.query.filter_by(username=usernamein).first()
-    if username is check_password_hash(username.password, password):
+def verify_password(username, password):
+    username=login.query.filter_by(username=username).first()
+    if not username or not check_password_hash(username.password, password):
         return username.keterangan
-    return username.keterangan
+    
 
 @app.route('/api/v1/login') 
 @auth.login_required
