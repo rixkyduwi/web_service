@@ -9,7 +9,7 @@ auth = HTTPTokenAuth(scheme='Bearer')
 
 # nama kelompok 
 # rizky dwi saputra (6A) 
-# muh saefudin fikri (6B) 
+# moh saefudin fikri (6B) 
 tokens = {
     "secret-token-rizky": "19090107",
     "secret-token-saefudin": "19090101"
