@@ -2,12 +2,17 @@ NAMA : Rizky Dwi Saputra
 KELAS : 6A
 NIM : 19090107
 
-NAMA : Muh Saefudin Fikri
+NAMA : Moh Saefudin Fikri
 KELAS : 6B
 NIM : 19090101
 
+Login auth basic
 username > 19090107
 passwword > 123
 
 username > 19090101
 passwword > 123
+
+Login token 
+Secret key : secret-key-rizky
+Secret key : secret-key-saefudin
