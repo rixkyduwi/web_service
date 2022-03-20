@@ -1,1 +1,10 @@
-1. 
+cara menjalankan
+1. install envirotment py-m venv venv 
+2. install requirements.txt pip install -r requirements.txt 
+3.1 untuk login authbasic jalankan security_authbasic.py dengan perintah python security_authbasic.py lalu buka postman
+3.2 test di postman buat collection > new request > copy url http://127.0.0.1:4000/api/v1/login pilih metode get
+3.3 lalu pilih Basic Auth masukan username dan password nya cth username= 19090107 password = 123 lalu klik send 
+4.1 untuk login token  jalankan security_token.py dengan perintah python security_token.py lalu buka postman
+4.2 test di postman buat collection > new request > copy url http://127.0.0.1:4000/api/v2/users/info pilih metode get
+4.3 lalu pilih Bearer Token masukan secret key cth secret-key-rizky lalu klik send akan muncul hasilnya halo 19090107! nama yg muncul sesuai dengan value dari secret key tsb 
+--selesai--
